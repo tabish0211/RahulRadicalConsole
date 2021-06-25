@@ -1,4 +1,8 @@
-﻿
+﻿git init//only one time to do
+git add .
+git commit -m "My first commit"
+git remote add origin https://github.com/tabish0211/CICD-Console.git  ---only one time
+git push -u origin master
 
 //Day-1
 
@@ -165,4 +169,145 @@
                 
             //}
 
+
+			 //array--1 2 3 4 ---memory size data type--int--4byte--char-2--2 byte
+            //n---numbers values of the same type dont decalre n number of variables--use array
+
+            //datatype[] arr_variable= new datatype[size];//1-D
+            char[] arrChar = new char[10];
+            int[] arrInt = new int[10];
+            arrInt[3] = 10;
+
+            for (int i = 0; i < arrInt.Length; i++)
+            {
+                Console.WriteLine(arrInt[i]);
+            }
 			//Day-2 End
+
+			//Day-3 start
+
+			 //WAP to find eldest amongst three friends
+            //Amar Akbar Anthony
+
+            Console.WriteLine("Enter age for Amar");
+            int amarAge = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter age for Akbar");
+            int akbarAge = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter age for Anthony");
+            int anthonyAge = Convert.ToInt32(Console.ReadLine());
+
+            //comparison
+
+            if (amarAge>akbarAge)
+            {
+                if (amarAge>anthonyAge)
+                {
+                    Console.WriteLine("amar is eldest one");
+                }
+                else
+                {
+                    Console.WriteLine("Anthony is eldest one");
+
+                }
+                
+            }
+            else
+            {
+                if (akbarAge > anthonyAge)
+                {
+                    Console.WriteLine("akbar is eldest one");
+                }
+                else
+                {
+                    Console.WriteLine("Anthony is eldest one");
+
+                }
+
+            }
+
+
+			//assignment
+			WAP to find count of even and odd numbers in the given range
+			5---20
+
+			
+           //WAP to find count of lower,upper and special case in the given string
+            //Tabish0211@gmail.com
+            //T-1,l-13,n-4 s-2
+
+            //@--64--. 46
+
+            string str = "Tabish0211@gmail.com";
+            char[] charArr = str.ToCharArray();
+            int upperCaseCount = 0, lowerCaseCount = 0, numericCount = 0, specialSymbolCount = 0;
+            for (int i = 0; i < charArr.Length; i++)
+            {
+                int asciiVal=Convert.ToInt32(charArr[i]);
+
+                if (asciiVal>=65 && asciiVal<=90)
+                {
+                    upperCaseCount++;
+                }
+                else if (asciiVal>=97 && asciiVal<=122)
+                {
+                    lowerCaseCount++;
+                }
+                else if (asciiVal>=48 && asciiVal<=57)
+                {
+                    numericCount++;
+                }
+                else if (asciiVal>=58 && asciiVal<=64)
+                {
+                    specialSymbolCount++;
+                }
+                else if (asciiVal>=58 && asciiVal<=64)
+                {
+                    
+                }
+            }
+
+            Console.WriteLine("uppercase count:{0} and lowercase count :{1} numeric count :{2} specialcase count :{3}",upperCaseCount,lowerCaseCount,numericCount,specialSymbolCount);
+			
+
+
+
+			//WAP to display all the leap years in the given range and show count of the leap years.
+            //1900---2020---count--what are those
+            //yr%400----ly
+            //yr%4==0 yr%100!=0--ly
+            //no leapyr 
+
+            Console.WriteLine("Enter starting point");
+            int start = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter end point");
+            int end = Convert.ToInt32(Console.ReadLine());
+
+            int count = 0;
+            for (int year = start; year <= end; year++)
+            {
+                if (year%400==0)
+                {
+                    Console.WriteLine(year);
+                    count++;
+
+                }
+                else if (year%4==0 && year%100!=0)
+                {
+                    Console.WriteLine(year);
+                    count++;
+                }
+            }
+
+            Console.WriteLine("the total number of leap years in between {0} to  {1} is {2}", start, end, count);
+			
+			
+
+			//Assignment: WAP to find factorials of every number given in the range.
+			//2 5---2
+			//3--6
+
+
+			//Day-3 End
