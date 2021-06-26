@@ -311,3 +311,137 @@ git push -u origin master
 
 
 			//Day-3 End
+
+			//Day-4 -start
+			//break---continue
+
+            for (int i = 1; i < 11; i++)
+            {
+                //if (i==6)
+                //{
+                //    break;
+                //}
+                if (i==6)
+                {
+                    continue;
+                }
+                Console.WriteLine(2 * i);
+            }
+
+
+
+
+			class Program
+    {
+        //entry point method
+        //sharable
+        static int x;
+        static void Main()
+        {
+            //static methods only calls static methods or static variables...
+            //non static variables like class instance data members are not directly accissible in the static methods
+            Console.WriteLine(x);
+            Show();
+            int result = Sum();
+            Console.WriteLine(2*result);
+            MethodWithParams("Rakesh");
+            Console.ReadLine();
+        }
+
+        //Default methods
+        static void Show()
+        {
+            Console.WriteLine("I am show method");
+        }
+
+        static int Sum()
+        {
+            int x = 1, y = 2;
+            return x + y;
+        }
+
+        //parametrized
+        static void MethodWithParams(string value)
+        {
+            value = "Mr/Miss" + value;
+            Console.WriteLine(value);
+        }
+
+    }
+
+
+
+	  
+        static void Main()
+        {
+
+            int n1 = 5, n2 = 6;
+            int r;
+            Sum(ref n1,ref n2,out r);
+            Console.WriteLine(r);
+            
+            Console.ReadLine();
+        }
+
+        static void Sum(ref int x,ref int y,out int r)
+        {
+            r = x + y;
+                   
+        }
+
+
+
+		    //var--should be initialised ---var x;x=10;
+            //assigning=//calculation
+            var r = 2 + 3;
+           // r = "Rakesh";
+
+            var s="Tabish "+ "Ahmad";
+
+
+            //dynamic--C# 4.0--2010
+            dynamic t ;
+            t= 1 + 2;//resolved runtime
+            t = "Rahul";
+
+
+
+			static void Main()
+        {
+            //SetDetails("t", 13, 12000);
+           // SetDetails(age: 12, name: "Rahul", salary: 1);
+            Discount();//normal customer
+            Discount(20);//Silver customer
+            MethodforOptiopnal();
+            MethodforOptiopnal(1,2);
+            MethodforOptiopnal(1,2,3);
+            Console.ReadLine();
+        }
+
+        static void SetDetails(string name, int age, int salary)
+        { 
+        
+        
+        }
+
+        static void Discount(int discount=10)//optional parameter
+        { 
+        
+        
+        }
+
+
+
+        static void MethodforOptiopnal(int x=2,int y=0,int z=0)//optional parameter
+        {
+
+
+        }
+
+
+		 //post or pre
+            int x = 1;
+            int y = x++ + ++x;
+            Console.WriteLine(y);//4
+            Console.WriteLine(x);//3
+			//Day-4-End

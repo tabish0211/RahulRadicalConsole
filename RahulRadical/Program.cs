@@ -8,15 +8,20 @@ namespace RahulRadical
 {
     class Program
     {
-        //entry point method
-
-        
         static void Main()
-        {          
+        {
+            string name = "Ramesh";//immutable--you cant modify---heap--1x
+            name = name + " Kumar";//creates new memory---2x---makes slow processing string calculation
+            Console.WriteLine(name);
 
-
-
+            StringBuilder strBuild = new StringBuilder("Ramesh");//mutable--raeding from a file --
+            strBuild.Append(" Kumar");
+            Console.WriteLine(strBuild);
             Console.ReadLine();
         }
+
+       
+        
+
     }
 }
