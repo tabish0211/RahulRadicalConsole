@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,20 +9,43 @@ namespace RahulRadical
 {
     class Program
     {
+
         static void Main()
         {
-            string name = "Ramesh";//immutable--you cant modify---heap--1x
-            name = name + " Kumar";//creates new memory---2x---makes slow processing string calculation
-            Console.WriteLine(name);
-
-            StringBuilder strBuild = new StringBuilder("Ramesh");//mutable--raeding from a file --
-            strBuild.Append(" Kumar");
-            Console.WriteLine(strBuild);
+            Customer cust = new Customer(1001, "Rakesh");
+            cust.ShowData();
             Console.ReadLine();
-        }
-
-       
+        }       
         
 
     }
+
+    //DRY---
+    class Customer
+    {
+        private int id;
+        private string name;
+
+        public Customer(int id)
+        {
+            this.id = id;
+
+        }
+
+        public Customer(int id,string name):this(id)
+        {
+            this.name = name;
+            //this.id = id;
+
+        }
+
+        public void ShowData()
+        {
+
+            Console.WriteLine(this.id+""+this.name);
+        
+        }
+
+    }
+
 }

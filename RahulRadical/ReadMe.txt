@@ -445,3 +445,61 @@ git push -u origin master
             Console.WriteLine(y);//4
             Console.WriteLine(x);//3
 			//Day-4-End
+
+			//Day-5-Start
+
+			private int _Id;
+
+        public int Id
+        {
+            set {
+
+                _Id = value;
+            
+            }
+            get {
+
+                return _Id;
+            }
+        
+        }
+
+        internal void SetData(int p)
+        {
+            _Id = p;
+        }
+
+        internal int GetData()
+        {
+            return _Id;
+        }
+
+
+
+
+
+		public int Id { get; private set; }
+
+
+        //constructor overloading
+        public Customer()
+        {
+            Id = 1001;
+
+            Console.WriteLine("this is default");
+        }
+
+        public Customer(int id)
+        {
+            Id = id ;
+            Console.WriteLine("this is with params");
+        }
+
+        //CLR
+        static Customer()
+        {
+
+            Console.WriteLine("I will be called first");
+        }
+
+			//Day-5-End
