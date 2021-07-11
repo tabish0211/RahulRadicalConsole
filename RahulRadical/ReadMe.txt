@@ -503,3 +503,107 @@ git push -u origin master
         }
 
 			//Day-5-End
+
+
+			//Day-6-start
+			Given recordings
+			//Day-6-End
+
+
+			//Day-7-start
+			 //Collections,LINQ,Exception Handling
+            ArrayList arrlst = new ArrayList();
+            arrlst.Add(1);//Object
+            arrlst.Add("Rahul");
+
+            Student s = new Student();
+            s.ID = 201;
+
+            arrlst.Add(s);
+
+            foreach (var item in arrlst)
+            {
+                if (item.GetType().Name.Equals("Student"))
+                {
+                    var st = item as Student;
+                    Console.WriteLine(st.ID);
+                }
+                else
+                {
+                    Console.WriteLine(item);
+                }
+                
+                
+            }
+
+
+
+
+			class Student {
+
+        public int ID { get; set; }
+    
+    }
+
+    /*
+     * take classes--Student(Id,name,Class)---Teachers(TID,TName,Sal)
+     * create collection of three studentand three teachers ,keep in same collection
+     * then print out as follows
+     * 
+     * StudentDetails:
+     * 101 
+     * Aakash 
+     * 1
+     * 102 
+     * Rakesh 
+     * 2
+     * 
+     * 
+     * TeacherDetails:
+     * 201 James 23000
+     * 202 Maya   25000
+     * */
+
+
+
+
+
+	  List<Student> lst = new List<Student>();
+            //lst.Add("abcd");
+            //lst.Add(1);
+
+            Student objRamesh = new Student();
+            objRamesh.Id = 101;
+            objRamesh.Name = "Ramesh";
+
+            lst.Add(objRamesh);
+
+            Student objRakesh = new Student();
+            objRakesh.Id = 102;
+            objRakesh.Name = "Rakesh";
+            lst.Add(objRakesh);
+
+            foreach (var item in lst)
+            {
+                Console.WriteLine(item.Id);
+                Console.WriteLine(item.Name);
+                
+            }
+
+
+			 class Student
+    {
+
+        public int Id { get; set; }
+        public string Name { get; set; }
+    
+    }
+
+    /*
+     * Class--Customer---CustId,Name,CustBillAmount---
+     * 5--customer--put list---customer
+     *  retrieve---*/
+			//Day-7-End
+
+
+
